@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos Linux</title>
+    <link rel="stylesheet" href="/css/linux/comandos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Comandos básicos de Linux</h1>
+        <p class="intro">Esta guía reúne los comandos esenciales que se utilizan en la administración y uso diario de sistemas Linux.</p>
+
+        <div class="grid-container">
+            <!-- Navegación -->
+            <div class="card">
+                <div class="card-header">📂 Navegación</div>
+                <div class="card-content">
+                    <div class="command-line">
+                        <code class="command">pwd</code>
+                        <span class="description"># Muestra el directorio actual</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">ls</code>
+                        <span class="description"># Lista archivos del directorio</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">cd</code>
+                        <span class="description"># Cambia de directorio</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">tree</code>
+                        <span class="description"># Muestra estructura de carpetas</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Archivos y Directorios -->
+            <div class="card">
+                <div class="card-header">📁 Archivos y Directorios</div>
+                <div class="card-content">
+                    <div class="command-line">
+                        <code class="command">mkdir</code>
+                        <span class="description"># Crea un directorio</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">touch</code>
+                        <span class="description"># Crea un archivo vacío</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">cp</code>
+                        <span class="description"># Copia archivos</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">mv</code>
+                        <span class="description"># Mueve archivos</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">rm</code>
+                        <span class="description"># Elimina archivos</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visualización de Archivos -->
+            <div class="card">
+                <div class="card-header">📄 Visualización de Archivos</div>
+                <div class="card-content">
+                    <div class="command-line">
+                        <code class="command">cat</code>
+                        <span class="description"># Muestra el contenido de un archivo</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">less</code>
+                        <span class="description"># Visualiza archivo página a página</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">head</code>
+                        <span class="description"># Muestra las primeras líneas</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">tail</code>
+                        <span class="description"># Muestra las últimas líneas</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Búsqueda -->
+            <div class="card">
+                <div class="card-header">🔍 Búsqueda</div>
+                <div class="card-content">
+                    <div class="command-line">
+                        <code class="command">grep</code>
+                        <span class="description"># Busca texto en archivos</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">find</code>
+                        <span class="description"># Busca archivos por nombre</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Información del Sistema -->
+            <div class="card">
+                <div class="card-header">🖥️ Información del Sistema</div>
+                <div class="card-content">
+                    <div class="command-line">
+                        <code class="command">arch</code>
+                        <span class="description"># Arquitectura del equipo</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">uname</code>
+                        <span class="description"># Información del sistema</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">uname -a</code>
+                        <span class="description"># Información del sistema</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">dmidecode -q</code>
+                        <span class="description"># Muestra los componentes del sistema</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">df -h</code>
+                        <span class="description"># Espacio libre en discos</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">free -h</code>
+                        <span class="description"># Memoria disponible</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">uptime</code>
+                        <span class="description"># Tiempo encendido</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">lspci -tv</code>
+                        <span class="description"># Muestra los dispositivos periféricos</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">lsusb -tv</code>
+                        <span class="description"># Muestra los dispositivos USB</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">date</code>
+                        <span class="description"># Fecha del sistema</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">cal</code>
+                        <span class="description"># Calendario</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Permisos -->
+            <div class="card">
+                <div class="card-header">🔐 Permisos</div>
+                <div class="card-content">
+                    <div class="command-line">
+                        <code class="command">chmod</code>
+                        <span class="description"># Cambia permisos</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">chown</code>
+                        <span class="description"># Cambia propietario</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gestión de Usuarios -->
+            <div class="card">
+                <div class="card-header">👤 Gestión de Usuarios</div>
+                <div class="card-content">
+                    <div class="command-line">
+                        <code class="command">whoami</code>
+                        <span class="description"># Muestra el usuario actual</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">id</code>
+                        <span class="description"># Muestra ID de usuario y grupo</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">adduser</code>
+                        <span class="description"># Crea un nuevo usuario</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Procesos -->
+            <div class="card">
+                <div class="card-header">⚙️ Procesos</div>
+                <div class="card-content">
+                    <div class="command-line">
+                        <code class="command">ps</code>
+                        <span class="description"># Lista procesos activos</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">top</code>
+                        <span class="description"># Monitorea procesos en tiempo real</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">kill</code>
+                        <span class="description"># Termina procesos</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ayuda y Utilidades -->
+            <div class="card">
+                <div class="card-header">🧠 Ayuda y Utilidades</div>
+                <div class="card-content">
+                    <div class="command-line">
+                        <code class="command">man</code>
+                        <span class="description"># Manual de comandos</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">history</code>
+                        <span class="description"># Historial de comandos</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">clear</code>
+                        <span class="description"># Limpia la terminal</span>
+                    </div>
+                    <div class="command-line">
+                        <code class="command">exit</code>
+                        <span class="description"># Cierra la sesión</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/linux/comandos.js"></script>
+</body>
+</html>
