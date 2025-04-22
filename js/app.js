@@ -51,10 +51,11 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("a[data-seccion]").forEach(link => {
     link.addEventListener("click", e => {
       e.preventDefault();
-      const seccion = e.target.getAttribute("data-seccion");
+      const seccion = link.getAttribute("data-seccion");
       cargarSeccion(seccion);
     });
   });
+  
 
   document.addEventListener("click", e => {
     const target = e.target.closest(".card-proyecto");

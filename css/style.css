@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: 'Fira Code', 'Roboto Mono', monospace;
-    background-color: #0f0f0f;
+    background-color: #182733;
     color: white;
     line-height: 1.6;
 }
@@ -12,10 +12,10 @@ header {
     position: sticky;
     top: 0;
     z-index: 999;
-    background-color: #0f0f0f;
+    background-color: #182733;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
-  
+    
 /* 🔧 TOP BAR (Logo - Título - Redes) */
 #top-bar {
     display: grid;
@@ -105,7 +105,7 @@ hr {
 /* NAV */
 nav {
     padding: 15px 0;
-    background-color: #111;
+    background-color: #182733;
 }
   
 #nav-container {
@@ -1043,7 +1043,7 @@ ul {
 
 /* Footer */
 footer {
-    background-color: #111;
+    background-color: #182733;
     padding: 30px 0;
     margin-top: 60px;
     border-top: 1px solid #333;
