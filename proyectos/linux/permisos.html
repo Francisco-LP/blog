@@ -1,1 +1,99 @@
-<h1>Permisos en linux</h1>
+<section class="contenido-proyecto">
+    <h2>🔐 Permisos en Linux</h2>
+    <p>En Linux, todos los archivos y directorios tienen permisos que definen quién puede leerlos, modificarlos o ejecutarlos. Esto es esencial para proteger el sistema y controlar el acceso.</p>
+    <br>
+    <h3>Clases de usuarios</h3>
+    <p>Cada archivo tiene tres tipos de usuarios que pueden interactuar con él:</p>
+    <div class="lista-permisos">👤 <strong>Usuario (u):</strong> El dueño del archivo</div>
+    <div class="lista-permisos">👥 <strong>Grupo (g):</strong> Miembros del grupo asignado</div>
+    <div class="lista-permisos">🌐 <strong>Otros (o):</strong> Todos los demás usuarios del sistema</div>
+    <p><b>¿Quién puede cambiar los permisos?</b></p>
+    <p>El dueño del archivo (usuario) puede modificar los permisos. Además, el superusuario (root) tiene el poder de cambiar los permisos de cualquier archivo o directorio del sistema, sin importar quién sea el dueño.</p>
+    <br>
+    <h3>Tipos de permisos</h3>
+    <p>Cada uno (usuario, grupo, otros) puede tener uno o más de los siguientes permisos sobre un archivo o directorio:</p>
+    <div class="lista-permisos">📖 <strong>Lectura (r):</strong> Permite ver el contenido del archivo o listar un directorio</div>
+    <div class="lista-permisos">✏️ <strong>Escritura (w):</strong> Permite modificar o eliminar el archivo</div>
+    <div class="lista-permisos">🚀 <strong>Ejecución (x):</strong> Psermite ejecutar un archivo como programa o script</div>
+  </section>
+<br>
+<h3>Ver los permisos con <code>ls -l</code></h3>
+<p>Ejemplo al ejecutar el comando: <code>ls -l</code> se observa lo siguiente:</p>
+<pre><code>-rwxr-xr-x 1 francisco users 2048 abr 4 12:00 script.sh</code></pre>
+<p>Esta linea se desglosa de la siguiente forma:<pre><code>| -rwxr-xr-x | 1 | francisco | users | 2048 | abr 4 12:00 | script.sh |</code></pre></p>
+
+<table>
+    <tr><th></th><th></th></tr>
+    <tr><td>-rwxr-xr-x </td><td>Tipo de archivo y sus permisos</td></tr>
+    <tr><td>1</td><td>Número de enlaces al archivo</td></tr>
+    <tr><td>francisco</td><td>Propietario del archivo</td></tr>
+    <tr><td>users</td><td>Grupo al que pertenece el archivo</td></tr>
+    <tr><td>2048</td><td>Tamaño del archivo</td></tr>
+    <tr><td>abr 4 12:00</td><td>Fecha de creación o de modificación</td></tr>
+    <tr><td>script.sh</td><td>Nombre del archivo o directorio</td></tr>
+</table>
+
+En la primera parte de esta linea aparece el tipo de archivo y sus permisos, que se interpretan de la siguiente forma:
+</p>
+<img src="../../assets/linux/permisoslinux.png" alt="">
+<p>En el primer bloque se encuentra el tipo de archivo. Los valores que se pueden encontrar son:</p>
+<div class="lista-permisos">📄 <strong>Archivo Regular (-):</strong> Un archivo "normal" que contiene datos, texto, código, imágenes, etc. Ejemplo: <pre><code>-rw-r--r-- 1 usuario grupo  1234 abr 6 10:00 documento.txt</code></pre></div>
+<div class="lista-permisos">📁 <strong>Directorio (d):</strong> Un contenedor de archivos y otros directorios (una carpeta, vaya). Ejemplo: <pre><code>drwxr-xr-x 2 usuario grupo  4096 abr 6 10:00 mis_documentos</code></pre></div>
+<div class="lista-permisos">🔗 <strong>Acceso directo (Symlink) (l):</strong> Un "acceso directo" a otro archivo o directorio. Ejemplo: <pre><code>lrwxrwxrwx 1 usuario grupo    9 abr 6 10:00 acceso.txt -> archivo.txt</code></pre></div>
+<div class="lista-permisos">🎹  <strong>Dispositivo de caracteres (c):</strong>U n archivo especial que representa un dispositivo que maneja datos caracter por carácter (como un teclado o puerto serie). Ejemplo: <pre><code>crw-rw---- 1 root dialout 4, 64 abr 6 10:00 /dev/ttyS0</code></pre></div>
+<div class="lista-permisos">💾  <strong>Dispositivo de bloques:</strong> Archivo especial para dispositivos que manejan datos en bloques, como discos duros o memorias USB. Ejemplo: <pre><code>brw-rw---- 1 root disk 8, 1 abr 6 10:00 /dev/sda1</code></pre></div>
+<div class="lista-permisos">🔌 <strong>Socket (s):</strong> Un archivo que permite comunicación entre procesos (IPC) de manera bidireccional, como un punto de red local. Ejemplo: <pre><code>srwxrwxrwx 1 usuario grupo 0 abr 6 10:00 /tmp/socket_app</code></pre></div>
+<div class="lista-permisos">🚰 <strong>Tubería con nombre FIFO (p):</strong> Un canal de comunicación entre procesos (como un tubo de un solo sentido). Se queda en el sistema de archivos. Ejemplo: <pre><code>prw-r--r-- 1 usuario grupo 0 abr 6 10:00 tuberia</code></pre></div>
+<br>
+<p>Después del primer carácter que indica el tipo de archivo, los siguientes nueve caracteres que representan los permisos de acceso al archivo o directorio.
+
+    Estos 9 caracteres están divididos en tres grupos de 3 bits, y cada grupo corresponde a un tipo de usuario:</p>
+
+<img src="/assets/linux/perminos.png" alt="">
+<ul>
+  <li class="lista-permisos"><strong>rwx</strong> – El propietario puede leer, escribir y ejecutar</li>
+  <li class="lista-permisos"><strong>r-x</strong> – El grupo puede leer y ejecutar</li>
+  <li class="lista-permisos"><strong>r--</strong> – Otros solo pueden leer</li>
+</ul>
+<br>
+<h3>Notación simbólica</h3>
+<ul>
+    <li class="lista-permisos"><code>chmod u+x script.sh</code> → agrega ejecución al usuario</li>
+    <li class="lista-permisos"><code>chmod g-w archivo.txt</code> → quita escritura al grupo</li>
+</ul>
+
+<h3>5. Notación numérica y bits</h3>
+<p>Se usan 3 dígitos (usuario, grupo, otros), cada uno suma sus permisos:</p>
+<table>
+    <tr><th>Permiso</th><th>Binario</th><th>Decimal</th></tr>
+    <tr><td>rwx</td><td>111</td><td>7</td></tr>
+    <tr><td>rw-</td><td>110</td><td>6</td></tr>
+    <tr><td>r--</td><td>100</td><td>4</td></tr>
+</table>
+<p><code>chmod 755 archivo</code> = rwx (7), r-x (5), r-x (5)</p>
+<br>
+<h3>6. Cambiar propietario y grupo</h3>
+<ul>
+    <li class="lista-permisos"><code>chown usuario archivo</code></li>
+    <li class="lista-permisos"><code>chown usuario:grupo archivo</code></li>
+</ul>
+
+<h3>7. Permisos especiales</h3>
+<ul>
+    <li class="lista-permisos"><strong>Setuid:</strong> <code>chmod u+s archivo</code></li>
+    <li class="lista-permisos"><strong>Setgid:</strong> <code>chmod g+s archivo</code></li>
+    <li class="lista-permisos"><strong>Sticky bit:</strong> <code>chmod +t /tmp</code></li>
+</ul>
+
+<h3>8. Permisos por defecto: <code>umask</code></h3>
+<pre><code>umask       # muestra valor actual
+umask 022   # permisos por defecto para nuevos archivos</code></pre>
+
+<h3>9. Resumen de comandos comunes</h3>
+<table>
+    <tr><th>Comando</th><th>Acción</th></tr>
+    <tr><td><code>chmod 755 archivo</code></td><td>Permisos rwx para usuario, rx para grupo y otros</td></tr>
+    <tr><td><code>chmod u+x archivo</code></td><td>Agrega ejecución al usuario</td></tr>
+    <tr><td><code>chown juan archivo</code></td><td>Cambia el propietario</td></tr>
+    <tr><td><code>chmod +t carpeta</code></td><td>Activa sticky bit en directorio</td></tr>
+</table>

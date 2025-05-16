@@ -1,1 +1,38 @@
-<h1>Estructura de archivos de linux</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura de archivos en Linux</title>
+    <link rel="stylesheet" href="/css/linux/directorios.css">
+</head>
+<body>
+    <h1>Estructuras de archivos en linux</h1>
+    <section class="articulo-git">
+        <h2>📂 Estructura de directorios en Linux</h2>
+        <p>Linux organiza el sistema de archivos en una jerarquía de tipo árbol. Todo parte desde el directorio raíz <code>/</code>. A continuación, se describen los principales directorios del sistema:</p>
+      
+        <ul class="lista-estilizada">
+          <li><code>/</code> – Raíz del sistema. Punto de partida de toda la jerarquía.</li>
+          <li><code>/bin</code> – Contiene comandos esenciales accesibles para todos los usuarios.</li>
+          <li><code>/boot</code> – Archivos necesarios para iniciar el sistema (kernel, GRUB, etc.).</li>
+          <li><code>/dev</code> – Dispositivos del sistema representados como archivos (USB, discos, etc.).</li>
+          <li><code>/etc</code> – Archivos de configuración del sistema y servicios.</li>
+          <li><code>/home</code> – Directorios personales de los usuarios. Ej: <code>/home/francisco</code>.</li>
+          <li><code>/lib</code> – Bibliotecas compartidas necesarias por los binarios de <code>/bin</code> y <code>/sbin</code>.</li>
+          <li><code>/media</code> y <code>/mnt</code> – Puntos de montaje para dispositivos externos (pendrives, discos).</li>
+          <li><code>/opt</code> – Software adicional instalado manualmente.</li>
+          <li><code>/proc</code> – Sistema virtual que muestra información del sistema y procesos.</li>
+          <li><code>/root</code> – Directorio personal del usuario root.</li>
+          <li><code>/run</code> – Información del sistema desde el arranque (PID, sockets, etc.).</li>
+          <li><code>/sbin</code> – Binarios esenciales para administración del sistema (solo root).</li>
+          <li><code>/tmp</code> – Archivos temporales, borrados al reiniciar.</li>
+          <li><code>/usr</code> – Programas, librerías y documentación para usuarios.</li>
+          <li><code>/var</code> – Datos variables como logs, colas de impresión y bases de datos temporales.</li>
+        </ul>
+      
+        <p>💡 Conocer esta estructura te ayuda a entender dónde están las configuraciones, cómo montar discos o dónde buscar logs del sistema.</p>
+      </section>
+      
+</body>
+</html>
